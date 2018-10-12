@@ -27,3 +27,6 @@
 # User.create(email: "meister@flatiron.com", password_digest: BCrypt::Password.create('meister'), role: "teacher", person_type: "Teacher", person_id: 8)
 # User.create(email: "crockett@flatiron.com", password_digest: BCrypt::Password.create('crockett'), role: "teacher", person_type: "Teacher", person_id: 9)
 # User.create(email: "raber@flatiron.com", password_digest: BCrypt::Password.create('raber'), role: "teacher", person_type: "Teacher", person_id: 10)
+
+# Course.create(name: "Life Science", teacher_id: 1)
+# Course.create(name: "Physical Science", teacher_id: 1)

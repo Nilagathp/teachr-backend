@@ -1,5 +1,4 @@
 class AssignmentSerializer < ActiveModel::Serializer
-  attributes :id, :name, :category, :points, :course_id
+  attributes :id, :name, :category, :points, :course
   belongs_to :course
-  belongs_to :teacher
 end

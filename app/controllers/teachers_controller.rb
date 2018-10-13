@@ -1,8 +1,9 @@
 class TeachersController < ApplicationController
+  skip_before_action :authorized, only: [:show]
 
-  def index
-    @teachers = Teacher.all
-    render json: @teachers
+  def show
+    @teacher = Teacher.find(params[:id])
+    render json: TeacherSerializer.new(@teacher)
   end
-  
+
 end

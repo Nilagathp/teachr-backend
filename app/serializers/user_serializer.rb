@@ -1,4 +1,4 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :email, :id, :role, :person
+  attributes :email, :id, :role
   has_one :person, polymorphic: true
 end

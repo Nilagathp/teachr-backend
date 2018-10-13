@@ -1,4 +1,5 @@
 class TeacherSerializer < ActiveModel::Serializer
-  attributes :name, :id, :courses
-  has_many :courses, serializer: CourseSerializer
+  attributes :name, :id, :courses, :assignments
+  has_many :courses
+  has_many :assignments, through: :courses
 end

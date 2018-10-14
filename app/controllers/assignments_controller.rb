@@ -1,6 +1,6 @@
 class AssignmentsController < ApplicationController
 
-  before_action :find_assignment, only [:update, :destroy]
+  before_action :find_assignment, only: [:update, :destroy]
 
   def create
     @assignment = Assignment.create(assignment_params)
@@ -25,5 +25,5 @@ class AssignmentsController < ApplicationController
   def find_assignment
     @assignment = Assignment.find(params[:id])
   end
-  
+
 end

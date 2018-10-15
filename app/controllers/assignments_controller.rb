@@ -19,7 +19,7 @@ class AssignmentsController < ApplicationController
   private
 
   def assignment_params
-    params.require(:assignment).permit(:name, :course_id, :category, :points)
+    params.require(:assignment).permit(:name, :course_id, :category, :points, :directions, :content, :questions => [])
   end
 
   def find_assignment

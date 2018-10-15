@@ -47,3 +47,9 @@
 # Course.create(name: "Band", teacher_id: 7)
 # Course.create(name: "Music", teacher_id: 7)
 # Course.create(name: "Art", teacher_id: 6)
+
+Section.create(period: 1, course_id: 1)
+Section.create(period: 2, course_id: 2)
+Section.create(period: 3, course_id: 1)
+Section.create(period: 4, course_id: 2)
+Section.create(period: 5, course_id: 1)

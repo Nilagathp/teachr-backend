@@ -53,6 +53,8 @@
 # Section.create(period: 3, course_id: 1)
 # Section.create(period: 4, course_id: 2)
 # Section.create(period: 5, course_id: 1)
+# Section.create(period: 2, course_id: 7)
+# Section.create(period: 3, course_id: 13)
 
 # Student.create(name: Faker::Name.name, grade: 7)
 # Student.create(name: Faker::Name.name, grade: 7)
@@ -89,3 +91,11 @@
 # end
 #
 # Student.all.each{|student| makeUserForStudent(student.id)}
+
+# StudentSection.create(section_id: 1, student_id: 1)
+# StudentSection.create(section_id: 6, student_id: 1)
+# StudentSection.create(section_id: 7, student_id: 1)
+# StudentSection.create(section_id: 1, student_id: 2)
+# StudentSection.create(section_id: 1, student_id: 3)
+# StudentSection.create(section_id: 2, student_id: 26)
+# StudentSection.create(section_id: 2, student_id: 27)

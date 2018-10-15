@@ -6,7 +6,7 @@ class StudentAssignmentsController < ApplicationController
 
   private
   def student_assignment_params
-    params.require(:student_assignment).permit(:student_id, :assignment_id, :points_earned)
+    params.require(:student_assignment).permit(:student_id, :assignment_id, :points_earned, :answers, :status)
   end
 
 end

@@ -3,6 +3,6 @@ class Teacher < ApplicationRecord
   has_many :courses
   has_many :assignments, through: :courses
   has_many :sections, through: :courses
-  has_many :students, through: :sections
-  has_many :student_assignments, through: :students
+  has_many :students, through: :sections, source: :person, source_type: 'Student'
+  # has_many :student_assignments, through: :students
 end

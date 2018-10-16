@@ -1,4 +1,4 @@
 class StudentSerializer < ActiveModel::Serializer
-  attributes :name, :id, :grade, :sections, :courses, :assignments, :student_assignments
-  has_many :student_sections
+  attributes :name, :id, :grade, :sections, :student_assignments, :courses
+  # has_many :sections, through: :student_sections
 end

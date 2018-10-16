@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2018_10_15_203459) do
     t.integer "points_earned", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "answers", default: [], array: true
+    t.text "answers", default: ["", "", ""], array: true
     t.string "status", default: "not_started"
   end
 

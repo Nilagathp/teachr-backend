@@ -133,7 +133,6 @@
 #   Student.create(name: Faker::Name.name, grade: [6, 7, 8].sample)
 #   i += 1
 # end
-###################SEEDED TO HERE##############################
 
 # def makeUserForStudent(id)
 #   last_name = Student.find(id).name.split(" ")[1].downcase
@@ -143,3 +142,5 @@
 # end
 #
 # Student.all.each{|student| makeUserForStudent(student.id)}
+
+###################SEEDED TO HERE##############################

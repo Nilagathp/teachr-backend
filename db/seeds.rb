@@ -143,4 +143,19 @@
 #
 # Student.all.each{|student| makeUserForStudent(student.id)}
 
+
+# def makeStudentSection(student_id, period)
+#   section_id = Section.all.select{|section| section.period == period}.map{|section| section.id}.sample
+#   StudentSection.create(student_id: student_id, section_id: section_id)
+# end
+#
+# Student.all.each{|student|
+#     i = 1
+#     num = 5
+#     until i > num do
+#       makeStudentSection(student.id, i)
+#       i += 1
+#     end
+# }
+
 ###################SEEDED TO HERE##############################

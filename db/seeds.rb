@@ -126,38 +126,19 @@
 # Section.create(period: 4, course_id: 21)
 # Section.create(period: 5, course_id: 21)
 
-----------------SEEDED TO HERE----------------------------
-# Student.create(name: Faker::Name.name, grade: 7)
-# Student.create(name: Faker::Name.name, grade: 7)
-# Student.create(name: Faker::Name.name, grade: 7)
-# Student.create(name: Faker::Name.name, grade: 7)
-# Student.create(name: Faker::Name.name, grade: 7)
-# Student.create(name: Faker::Name.name, grade: 7)
-# Student.create(name: Faker::Name.name, grade: 7)
-# Student.create(name: Faker::Name.name, grade: 7)
-# Student.create(name: Faker::Name.name, grade: 7)
-# Student.create(name: Faker::Name.name, grade: 7)
-# Student.create(name: Faker::Name.name, grade: 7)
-# Student.create(name: Faker::Name.name, grade: 7)
-# Student.create(name: Faker::Name.name, grade: 7)
-# Student.create(name: Faker::Name.name, grade: 8)
-# Student.create(name: Faker::Name.name, grade: 8)
-# Student.create(name: Faker::Name.name, grade: 8)
-# Student.create(name: Faker::Name.name, grade: 8)
-# Student.create(name: Faker::Name.name, grade: 8)
-# Student.create(name: Faker::Name.name, grade: 8)
-# Student.create(name: Faker::Name.name, grade: 8)
-# Student.create(name: Faker::Name.name, grade: 8)
-# Student.create(name: Faker::Name.name, grade: 8)
-# Student.create(name: Faker::Name.name, grade: 8)
-# Student.create(name: Faker::Name.name, grade: 8)
-# Student.create(name: Faker::Name.name, grade: 8)
-# Student.create(name: Faker::Name.name, grade: 8)
-# Student.create(name: Faker::Name.name, grade: 8)
+# i = 0
+# num = 300
+#
+# until i > num do
+#   Student.create(name: Faker::Name.name, grade: [6, 7, 8].sample)
+#   i += 1
+# end
+###################SEEDED TO HERE##############################
 
 # def makeUserForStudent(id)
-#   studentEmail = Student.find(id).name.split(" ")[1].downcase + "@flatiron.com"
-#   password = "student#{id}"
+#   last_name = Student.find(id).name.split(" ")[1].downcase
+#   studentEmail = last_name + "@flatiron.com"
+#   password = last_name
 #   User.create(email: studentEmail, password_digest: BCrypt::Password.create(password), role: "student", person_type: "Student", person_id: id)
 # end
 #

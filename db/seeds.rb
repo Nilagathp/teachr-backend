@@ -16,6 +16,8 @@
 # Teacher.create(name: "Mr. Meister")
 # Teacher.create(name: "Mr. Crockett")
 # Teacher.create(name: "Mr. Raber")
+# Teacher.create(name: "Mr. Cobb")
+# Teacher.create(name: "Mr. Catherman")
 #
 # User.create(email: "snyder@flatiron.com", password_digest: BCrypt::Password.create('snyder'), role: "teacher", person_type: "Teacher", person_id: 1)
 # User.create(email: "abril@flatiron.com", password_digest: BCrypt::Password.create('abril'), role: "teacher", person_type: "Teacher", person_id: 2)
@@ -27,7 +29,9 @@
 # User.create(email: "meister@flatiron.com", password_digest: BCrypt::Password.create('meister'), role: "teacher", person_type: "Teacher", person_id: 8)
 # User.create(email: "crockett@flatiron.com", password_digest: BCrypt::Password.create('crockett'), role: "teacher", person_type: "Teacher", person_id: 9)
 # User.create(email: "raber@flatiron.com", password_digest: BCrypt::Password.create('raber'), role: "teacher", person_type: "Teacher", person_id: 10)
-
+# User.create(email: "cobb@flatiron.com", password_digest: BCrypt::Password.create('cobb'), role: "teacher", person_type: "Teacher", person_id: 11)
+# User.create(email: "catherman@flatiron.com", password_digest: BCrypt::Password.create('catherman'), role: "teacher", person_type: "Teacher", person_id: 12)
+#
 # Course.create(name: "Life Science", teacher_id: 1)
 # Course.create(name: "Physical Science", teacher_id: 1)
 # Course.create(name: "Earth Science", teacher_id: 5)
@@ -47,15 +51,82 @@
 # Course.create(name: "Band", teacher_id: 7)
 # Course.create(name: "Music", teacher_id: 7)
 # Course.create(name: "Art", teacher_id: 6)
-
+# Course.create(name: "Computer Science", teacher_id: 11)
+# Course.create(name: "Chorus", teacher_id: 12)
+#
 # Section.create(period: 1, course_id: 1)
 # Section.create(period: 2, course_id: 2)
 # Section.create(period: 3, course_id: 1)
 # Section.create(period: 4, course_id: 2)
 # Section.create(period: 5, course_id: 1)
-# Section.create(period: 2, course_id: 7)
+#
+# Section.create(period: 1, course_id: 15)
+# Section.create(period: 2, course_id: 15)
 # Section.create(period: 3, course_id: 13)
+# Section.create(period: 4, course_id: 13)
+# Section.create(period: 5, course_id: 13)
+#
+# Section.create(period: 1, course_id: 10)
+# Section.create(period: 2, course_id: 9)
+# Section.create(period: 3, course_id: 9)
+# Section.create(period: 4, course_id: 10)
+# Section.create(period: 5, course_id: 9)
+#
+# Section.create(period: 1, course_id: 12)
+# Section.create(period: 2, course_id: 12)
+# Section.create(period: 3, course_id: 12)
+# Section.create(period: 4, course_id: 12)
+# Section.create(period: 5, course_id: 12)
+#
+# Section.create(period: 1, course_id: 3)
+# Section.create(period: 2, course_id: 4)
+# Section.create(period: 3, course_id: 4)
+# Section.create(period: 4, course_id: 4)
+# Section.create(period: 5, course_id: 3)
+#
+# Section.create(period: 1, course_id: 11)
+# Section.create(period: 2, course_id: 11)
+# Section.create(period: 3, course_id: 19)
+# Section.create(period: 4, course_id: 19)
+# Section.create(period: 5, course_id: 11)
+#
+# Section.create(period: 1, course_id: 18)
+# Section.create(period: 2, course_id: 17)
+# Section.create(period: 3, course_id: 17)
+# Section.create(period: 4, course_id: 18)
+# Section.create(period: 5, course_id: 17)
+#
+# Section.create(period: 1, course_id: 14)
+# Section.create(period: 2, course_id: 16)
+# Section.create(period: 3, course_id: 16)
+# Section.create(period: 4, course_id: 16)
+# Section.create(period: 5, course_id: 16)
+#
+# Section.create(period: 1, course_id: 5)
+# Section.create(period: 2, course_id: 5)
+# Section.create(period: 3, course_id: 5)
+# Section.create(period: 4, course_id: 6)
+# Section.create(period: 5, course_id: 6)
+#
+# Section.create(period: 1, course_id: 8)
+# Section.create(period: 2, course_id: 7)
+# Section.create(period: 3, course_id: 8)
+# Section.create(period: 4, course_id: 8)
+# Section.create(period: 5, course_id: 8)
+#
+# Section.create(period: 1, course_id: 20)
+# Section.create(period: 2, course_id: 20)
+# Section.create(period: 3, course_id: 20)
+# Section.create(period: 4, course_id: 20)
+# Section.create(period: 5, course_id: 20)
+#
+# Section.create(period: 1, course_id: 21)
+# Section.create(period: 2, course_id: 21)
+# Section.create(period: 3, course_id: 21)
+# Section.create(period: 4, course_id: 21)
+# Section.create(period: 5, course_id: 21)
 
+----------------SEEDED TO HERE----------------------------
 # Student.create(name: Faker::Name.name, grade: 7)
 # Student.create(name: Faker::Name.name, grade: 7)
 # Student.create(name: Faker::Name.name, grade: 7)
@@ -91,11 +162,3 @@
 # end
 #
 # Student.all.each{|student| makeUserForStudent(student.id)}
-
-# StudentSection.create(section_id: 1, student_id: 1)
-# StudentSection.create(section_id: 6, student_id: 1)
-# StudentSection.create(section_id: 7, student_id: 1)
-# StudentSection.create(section_id: 1, student_id: 2)
-# StudentSection.create(section_id: 1, student_id: 3)
-# StudentSection.create(section_id: 2, student_id: 26)
-# StudentSection.create(section_id: 2, student_id: 27)

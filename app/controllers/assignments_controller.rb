@@ -19,7 +19,9 @@ class AssignmentsController < ApplicationController
   private
 
   def assignment_params
-    params.require(:assignment).permit(:name, :course_id, :category, :points, :directions, :content, :questions => [])
+    params.require(:assignment).permit(:name, :course_id, :category, :points, :directions).tap do |white_list|
+      white_list[:content] = params[:assignment][:content].permit! if params[:assignment][:content]
+    end
   end
 
   def find_assignment

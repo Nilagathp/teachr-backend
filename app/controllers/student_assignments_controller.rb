@@ -12,7 +12,9 @@ class StudentAssignmentsController < ApplicationController
 
   private
   def student_assignment_params
-    params.require(:student_assignment).permit(:student_id, :assignment_id, :points_earned, :status, :answers => [])
+    params.require(:student_assignment).permit(:student_id, :assignment_id, :points_earned, :status).tap do |white_list|
+      white_list[:answers] = params[:student_assignment][:answers].permit! if params[:student_assignment][:answers]
+    end
   end
 
 end

@@ -6,9 +6,4 @@ class TeachersController < ApplicationController
     render json: @teachers
   end
 
-  # def students
-  #   @teacher = Teacher.find(params[:id])
-  #   Student.all.
-  # end
-
 end

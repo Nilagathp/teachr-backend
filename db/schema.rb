@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_19_173146) do
+ActiveRecord::Schema.define(version: 2018_10_21_172405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,13 +33,6 @@ ActiveRecord::Schema.define(version: 2018_10_19_173146) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "sections", force: :cascade do |t|
-    t.integer "period"
-    t.integer "course_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "student_assignments", force: :cascade do |t|
     t.integer "student_id"
     t.integer "assignment_id"
@@ -50,11 +43,9 @@ ActiveRecord::Schema.define(version: 2018_10_19_173146) do
     t.jsonb "answers"
   end
 
-  create_table "student_sections", force: :cascade do |t|
+  create_table "student_courses", force: :cascade do |t|
     t.integer "student_id"
-    t.integer "section_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer "course_id"
   end
 
   create_table "students", force: :cascade do |t|

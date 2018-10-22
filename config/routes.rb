@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :teachers, only: [:index]
   resources :students, only: [:index]
   resources :assignments, only: [:create, :update, :destroy]
-  resources :student_assignments, only: [:create, :update]
+  resources :student_assignments, only: [:create, :update, :destroy]
   post '/login', to: 'auth#create'
   get '/profile', to: 'users#profile'
 end

@@ -1,13 +1,19 @@
 class StudentAssignmentsController < ApplicationController
+
+  before_action :find_student_assignment, only: [:update, :destroy]
+
   def create
     @student_assignment = StudentAssignment.create(student_assignment_params)
     render json: @student_assignment
   end
 
   def update
-    @student_assignment = StudentAssignment.find(params[:id])
     @student_assignment.update(student_assignment_params)
     render json: @student_assignment
+  end
+
+  def destroy
+    render json: @student_assignment.destroy
   end
 
   private
@@ -16,5 +22,10 @@ class StudentAssignmentsController < ApplicationController
       white_list[:answers] = params[:student_assignment][:answers].permit! if params[:student_assignment][:answers]
     end
   end
+
+  def find_student_assignment
+    @student_assignment = StudentAssignment.find(params[:id])
+  end
+
 
 end

@@ -83,19 +83,3 @@ end
 Student.all.each{|student|
   makeStudentCourses(student.id)
 }
-
-####################SEEDED TO HERE#####################################
-
-# def makeAssignmentsForCourse(course_id)
-#   20.times do |i|
-#     name = Faker::Lorem.sentence(1, true, 4).chop
-#     points = [10, 15, 20, 25, 30].sample
-#     category = [0, 1, 2].sample
-#     directions = Faker::Lorem.paragraph(1, true, 3)
-#     content = 10.times.map { Faker::Lorem.paragraph(8, false, 12) }.join("\n\n")
-#     questions = Faker::Lorem.questions(3)
-#     Assignment.create(name: name, category: category, points: points, course_id: course_id, directions: directions, content: content, questions: questions)
-#   end
-# end
-#
-# Course.all.each{|course| makeAssignmentsForCourse(course.id)}

@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: mod-5-project-backend_production
   username: mod-5-project-backend
   password: <%= ENV['MOD-5-PROJECT-BACKEND_DATABASE_PASSWORD'] %>

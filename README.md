@@ -1,24 +1,25 @@
-# README
+# Flatiron Final Project - Teachr
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project was created as a streamlined single-page web application for teacher to create and manage their students' assignments. 
+Live demo: https://teachr-app.herokuapp.com
 
-Things you may want to cover:
+## Teachers are able to:
+* log-in
+* view the courses they teach
+* view and filter assignments by due date, category, and course
+* create assignments of various types
+* choose whether to assign to students now or later
+* view student assignments and filter by status
+* view student responses on submitted assignments 
+* assign a grade to students' assignments 
 
-* Ruby version
+## Students are able to:
+* log-in
+* view the courses in which they are enrolled 
+* view and filter assignment by course, category, due date, and status 
+* input answers to assignments 
+* save assignments to return to finish later 
+* submit assignments to their teachers 
+* view their grades on graded assignments 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Front end respository: https://github.com/jensnyder/teachr-frontend

@@ -22,4 +22,4 @@ Live demo: https://teachr-app.herokuapp.com
 * submit assignments to their teachers 
 * view their grades on graded assignments 
 
-Front end respository: https://github.com/jensnyder/teachr-frontend
+Front end repository: https://github.com/jensnyder/teachr-frontend

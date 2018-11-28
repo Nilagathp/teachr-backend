@@ -1,24 +1,51 @@
-# README
+# Flatiron Final Project - Teachr
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project was created as a streamlined single-page web application for teachers to create and manage their students' assignments.
 
-Things you may want to cover:
+- Front end repository: https://github.com/jensnyder/teachr-frontend
+- Live demo: https://teachr-app.herokuapp.com
 
-* Ruby version
+## Teachers are able to:
 
-* System dependencies
+- log-in
+- view the courses they teach
+- view and filter assignments by due date, category, and course
+- create assignments of various types
+- choose whether to assign to students now or later
+- view student assignments and filter by status
+- view student responses on submitted assignments
+- assign a grade to students' assignments
 
-* Configuration
+## Students are able to:
 
-* Database creation
+- log-in
+- view the courses in which they are enrolled
+- view and filter assignment by course, category, due date, and status
+- input answers to assignments
+- save assignments to return to finish later
+- submit assignments to their teachers
+- view their grades on graded assignments
 
-* Database initialization
+## Run Locally:
 
-* How to run the test suite
+### Run the Back End First
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+git clone git@github.com:jensnyder/teachr-backend.git
+cd teachr-backend
+bundle install
+rails db: setup
+rails server
+```
 
-* Deployment instructions
+- Verify that the back-end is running at http://localhost:3000/ You will be able to view all of the teachers in the database at http://localhost:3000/teachers
 
-* ...
+### Run the Front End
+
+```
+git clone git@github.com:jensnyder/teachr-frontend.git
+cd teachr-frontend
+yarn start
+```
+
+- The React app should open automatically in the browser at http://localhost:3001/
